@@ -9,7 +9,7 @@ function Post() {
         <Avatar
           alt="ShakibHossain"
           src="/static/images/avatar/1.jpg"
-          className="post_avatar"
+          className="post__avatar"
         />
         <h3>Username</h3>
       </div>
