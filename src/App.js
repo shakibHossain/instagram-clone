@@ -15,11 +15,21 @@ function App() {
 
       <h1>Hello World!</h1>
 
-      <Post />
-      <Post />
-      <Post />
-      {/* Posts */}
-      {/* Posts */}
+      <Post
+        username="cleverqazi"
+        caption="WOW it works"
+        imageUrl="https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/Ekran-Resmi-2019-11-18-18.08.13.png"
+      />
+      <Post
+        username="sssssangha"
+        caption="DOPE"
+        imageUrl="https://images.unsplash.com/photo-1564928003055-0f2c93ccfca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
+      <Post
+        username="shakib"
+        caption="This is a fun project"
+        imageUrl="https://images.unsplash.com/photo-1483121986724-c6627b388c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+      />
     </div>
   );
 }
