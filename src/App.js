@@ -101,12 +101,6 @@ function App() {
 
   return (
     <div className="app">
-      {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
-      ) : (
-        <h3>Sorry you need to log in to upload</h3>
-      )}
-
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
           <form className="app__signup">
@@ -176,17 +170,16 @@ function App() {
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
           alt=""
         />
+        {user ? (
+          <Button onClick={() => auth.signOut()}>Sign Out</Button>
+        ) : (
+          <div className="app__loginContainer">
+            <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
+
+            <Button onClick={() => setOpen(true)}>Sign Up</Button>
+          </div>
+        )}
       </div>
-
-      {user ? (
-        <Button onClick={() => auth.signOut()}>Sign Out</Button>
-      ) : (
-        <div className="app__loginContainer">
-          <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
-
-          <Button onClick={() => setOpen(true)}>Sign Up</Button>
-        </div>
-      )}
 
       <h1>Hello World!</h1>
 
@@ -198,6 +191,12 @@ function App() {
           imageUrl={post.imageUrl}
         />
       ))}
+
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Sorry you need to log in to upload</h3>
+      )}
     </div>
   );
 }
