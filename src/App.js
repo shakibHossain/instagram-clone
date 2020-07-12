@@ -63,15 +63,17 @@ function App() {
 
   useEffect(() => {
     // this is where the code runs
-    db.collection("posts").onSnapshot((snapshot) => {
-      // every time a new post is added, this code fires
-      setPosts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          post: doc.data(),
-        }))
-      );
-    });
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        // every time a new post is added, this code fires
+        setPosts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            post: doc.data(),
+          }))
+        );
+      });
   }, []);
 
   const signUp = (event) => {
