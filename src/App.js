@@ -184,6 +184,19 @@ function App() {
 
       <div className="app__posts">
         <div className="app__postsLeft">
+          <InstagramEmbed
+            url="https://www.instagram.com/p/B_U1WWijwSA/"
+            maxWidth={500}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
+
           {posts.map(({ id, post }) => (
             <Post
               key={id}
@@ -196,7 +209,7 @@ function App() {
           ))}
         </div>
         <div className="app__postsRight">
-          <InstagramEmbed
+          {/* <InstagramEmbed
             url="https://www.instagram.com/p/B_U1WWijwSA/"
             maxWidth={320}
             hideCaption={false}
@@ -207,7 +220,7 @@ function App() {
             onSuccess={() => {}}
             onAfterRender={() => {}}
             onFailure={() => {}}
-          />
+          /> */}
         </div>
       </div>
 
