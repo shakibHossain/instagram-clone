@@ -46,3 +46,7 @@
   border-top: 1px solid lightgray;
   color: #0095f6;
 }
+
+.post__comments {
+  padding: 20px;
+}
