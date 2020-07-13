@@ -1,11 +1,18 @@
 .imageupload {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /* width: 60%; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+
+  object-fit: contain;
+  background-color: #e9e9eb;
+  padding: 5px;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
 }
 
 .imageupload__progress {
