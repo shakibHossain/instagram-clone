@@ -10,3 +10,5 @@ Features -
 4. Users can post with captions and pictures.
 5. Users can comment on posts.
 6. Instagram was embeded within our app at the top of the page.
+
+Live url - https://instagram-clone-5bd97.web.app/
