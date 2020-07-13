@@ -47,10 +47,8 @@ function Post({ user, postId, username, caption, imageUrl }) {
         />
         <h3>{username}</h3>
       </div>
-      {/* header -> avatar + username */}
 
       <img class="post__image" src={imageUrl} alt="" />
-      {/* image */}
 
       <h4 className="post__text">
         <strong>{username}</strong> {caption}
@@ -63,24 +61,25 @@ function Post({ user, postId, username, caption, imageUrl }) {
           </p>
         ))}
       </div>
-      {/* username + caption*/}
-      <form className="post__commentBox">
-        <input
-          className="post__input"
-          type="text"
-          placeholder="Add a comment..."
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-        />
-        <button
-          className="post__button"
-          disabled={!comment}
-          type="submit"
-          onClick={postComment}
-        >
-          Post
-        </button>
-      </form>
+      {user && (
+        <form className="post__commentBox">
+          <input
+            className="post__input"
+            type="text"
+            placeholder="Add a comment..."
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+          />
+          <button
+            className="post__button"
+            disabled={!comment}
+            type="submit"
+            onClick={postComment}
+          >
+            Post
+          </button>
+        </form>
+      )}
     </div>
   );
 }
