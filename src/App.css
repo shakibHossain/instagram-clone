@@ -51,3 +51,7 @@
 .MuiLinearProgress-colorPrimary {
   background-color: #0095f6 !important;
 }
+
+.MuiLinearProgress-barColorPrimary {
+  background-color: #0058f6 !important;
+}
