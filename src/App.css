@@ -47,3 +47,7 @@
   margin-bottom: 10px;
   text-align: center;
 }
+
+.MuiLinearProgress-colorPrimary {
+  background-color: #0095f6 !important;
+}
